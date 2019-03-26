@@ -35,4 +35,31 @@ li {
 .container {
   max-width: 1200px;
   margin: auto;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+}
+
+.header {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+}
+@media @tablet-widths {
+  .header {
+    font-size: 28px;
+    margin-bottom: 20px;
+    margin-top: 70px;
+  }
+}
+@media @desktop-widths {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .header {
+    font-size: 35px;
+    margin-bottom: 20px;
+    margin-top: 70px;
+  }
 }

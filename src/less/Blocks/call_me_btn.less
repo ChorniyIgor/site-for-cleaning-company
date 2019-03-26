@@ -1,0 +1,53 @@
+.call_me {
+  position: fixed;
+  bottom: 40px;
+  left: 40px;
+}
+.call_me__btn {
+  width: 80px;
+  height: 80px;
+  background: @main-color;
+  border-radius: 50%;
+  box-shadow: 0 0 0 6px rgba(6, 59, 129, 0.33);
+  animation: breathe 1s ease-in-out infinite;
+  cursor: pointer;
+}
+.call_me__btn i {
+  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.call_me__msg {
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 100px;
+  width: 400px;
+  background: rgba(6, 59, 129, 0.9);
+  color: white;
+  width: 0;
+  opacity: 0;
+  font-size: 0;
+  transition: 0.3s opacity;
+}
+.call_me__btn:hover ~ .call_me__msg {
+  padding: 10px 15px;
+  width: 400px;
+  font-size: 18px;
+  opacity: 1;
+}
+@keyframes breathe {
+  0% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

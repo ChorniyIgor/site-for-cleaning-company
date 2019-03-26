@@ -1,0 +1,90 @@
+.work_process {
+  margin-top: 50px;
+}
+.process_list {
+  margin-top: 30px;
+  span {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 50%;
+    background: @main-color;
+    color: white;
+    margin-right: 10px;
+  }
+  li {
+    margin-bottom: 10px;
+  }
+}
+@media (min-width: 1000px) {
+  .work_process {
+    margin-top: 100px;
+  }
+  .process_list {
+    height: 500px;
+    width: 950px;
+    margin: auto;
+    background: url("../img/bgwork.png") center no-repeat;
+    position: relative;
+    margin-top: 70px;
+  }
+  .process_list li span {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: white;
+    margin-right: 0px;
+    width: auto;
+    height: auto;
+    background: none;
+  }
+  .process_list li {
+    position: absolute;
+    padding-left: 50px;
+  }
+  .process_list li:nth-child(1) {
+    right: 76px;
+    top: 52px;
+    width: 200px;
+  }
+  .process_list li:nth-child(2) {
+    right: 2px;
+    top: 234px;
+    width: 200px;
+  }
+  .process_list li:nth-child(3) {
+    right: 76px;
+    top: 390px;
+    width: 200px;
+  }
+  .process_list li:nth-child(4) {
+    left: 82px;
+    top: 404px;
+    width: 200px;
+    padding-left: 0px;
+    padding-right: 50px;
+    text-align: end;
+  }
+  .process_list li:nth-child(4) span {
+    position: absolute;
+    right: 0;
+    left: auto;
+  }
+  .process_list li:nth-child(5) {
+    left: 1px;
+    top: 235px;
+    width: 200px;
+    padding-left: 0px;
+    padding-right: 50px;
+    text-align: end;
+  }
+  .process_list li:nth-child(5) span {
+    position: absolute;
+    right: 0;
+    left: auto;
+  }
+}
