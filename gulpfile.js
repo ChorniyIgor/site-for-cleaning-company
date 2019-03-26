@@ -22,6 +22,11 @@ lazyRequireTask("copy-img", "./gulp/copy-img", {
   toSrc: "build/img"
 });
 
+lazyRequireTask("copy-assets", "./gulp/copy-assets", {
+  fromSrc: "src",
+  toSrc: "build"
+});
+
 lazyRequireTask("styles", "./gulp/styles", {
   src: "src/less/style.less"
 });
@@ -39,11 +44,12 @@ lazyRequireTask("clean", "./gulp/clean");
 gulp.task("watch", function() {
   gulp.watch("src/**/*.html", gulp.series("copy-html"));
   gulp.watch("src/img/**", gulp.series("copy-img"));
+  gulp.watch("src/assets/**/*.*", gulp.series("copy-assets"));
   gulp.watch("src/less/**/*.less", gulp.series("styles"));
   gulp.watch("src/js/**/*.js", gulp.series("scripts"));
 });
 
-gulp.task("copy-all", gulp.parallel("copy-html", "copy-img", "styles", "scripts"));
+gulp.task("copy-all", gulp.parallel("copy-html", "copy-assets", "copy-img", "styles", "scripts"));
 
 gulp.task("build", gulp.series("clean", "copy-all"));
 
